@@ -9,11 +9,11 @@ This is a modified version of the [Chic Theme](https://github.com/Siricee/hexo-t
 > Chic, French word meaning 'Elegant' in English.
 
 <p align="center">
-<img alt="Author" src="https://img.shields.io/badge/Author-Sirice-lightgray.svg"/>
+<img alt="Author" src="https://img.shields.io/badge/Author-Siricee-lightgray.svg"/>
+<img alt="Author" src="https://img.shields.io/badge/Author-neverbot-lightgray.svg"/>
 <img alt="Node" src="https://img.shields.io/badge/Node-6.0%2B-43853d.svg"/>
 <img alt="Hexo" src="https://img.shields.io/badge/Hexo-3.0+-0e83cd.svg"/>
 <img alt="Device" src="https://img.shields.io/badge/Device-responsive-orange.svg"/>
-<img alt="Build Status" src="https://img.shields.io/badge/build-passing-brightgreen"/>
 </p>
 
 ## Documentation language
@@ -46,7 +46,7 @@ An elegant, powerful, easy-to-read Hexo theme.
 ## Features
 - Appropriate blank blocks, elegant but not simple.
 
-- Light/Dark theme, just one click.
+- Light/Dark theme.
 
 - Abundant highlight mode.
 
@@ -110,6 +110,7 @@ plugins:
       enable-index-page: true
 ```
 
+Install this theme inside your blog installation directory:
 ```bash
 cd your-blog/themes
 git clone https://github.com/neverbot/hexo-theme-chic-multilang.git
@@ -132,40 +133,53 @@ INFO  Start processing
 INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 ```
 
-
 ## Configuration
 <details>
 <summary><mark>Click here to spread</mark></summary>
 
 ```yaml
 # Header
-navname: Bentham's Blog
+navname: Chic Multilang
 
-# navigatior items
+# navigator items
 nav:
-  Posts: /archives
-  Categories: /category
-  Tags: /tag
-  About: /about
+  - blog: 
+    name: nav.blog 
+    url: /archives
 
-# favicon
-favicon: /favicon.ico
+# favicons
+icons: true
 
 # Profile
-nickname: Jeremy Bentham
-
-### this variable is MarkDown form.
-description: Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** <br>Fusce eget urna vitae velit *eleifend interdum at ac* nisi.
 avatar: /image/avatar.jpeg
 
+i18n:
+  language: [en, es]
+
 # main menu navigation
-## links key words should not be changed.
-## Complete url after key words.
-## Unused key can be commented out.
+## link is the complete url
+## icon is the fontawesome icon name
+## prefix is the fontawesome style
+## Unused keys can be commented out.
 links:
-  Blog: /archives
+  Blog: 
+    link: /archives
+    icon: book-open
+    prefix: fas
+  Twitter: 
+    link: https://twitter.com/neverbot
+    icon: twitter
+    prefix: fab
+  LinkedIn: 
+    link: https://www.linkedin.com/in/ivanalonso
+    icon: linkedin
+    prefix: fab
+  Github: 
+    link: https://github.com/neverbot/
+    icon: github
+    prefix: fab
 #  Category:
-#  Tags:
+#  Tags: 
 #  Link:
 #  Resume:
 #  Publish:
@@ -173,23 +187,20 @@ links:
 #  Gallary:
 #  RSS:
 #  AliPay:
-  ZhiHu: https://www.zhihu.com/people/sirice
-#  LinkedIn:
+#  ZhiHu: 
 #  FaceBook:
-#  Twitter:
 #  Skype:
 #  CodeSandBox:
 #  CodePen:
 #  Sketch:
 #  Gitlab:
 #  Dribble:
-  Instagram:
-  Reddit:
+#  Instagram:
+#  Reddit:
 #  YouTube:
 #  QQ:
 #  Weibo:
 #  WeChat:
-  Github: https://github.com/Siricee
 
 # how links show: you have 2 choice--text or icon.
 links_text_enable: false
@@ -207,12 +218,13 @@ post_copyright_enable: true
 
 post_copyright_author_enable: true
 post_copyright_permalink_enable: true
-post_copyright_license_enable: true
-post_copyright_license_text: Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE
-post_copyright_slogan_enable: true
-post_copyright_slogan_text: Do you believe in <strong>DESTINY<strong>?
+post_copyright_license_enable: false
+post_copyright_license_text: Copyright (c) 2020 neverbot
+post_copyright_slogan_enable: false
+
 ## toc
 post_toc_enable: true
+page_toc_enable: true
 
 # Page
 page_title_enable: true
@@ -222,7 +234,7 @@ page_title_enable: true
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: MMMM D, YYYY
-time_format: H:mm:ss
+time_format: HH:mm:ss
 
 # stylesheets loaded in the <head>
 stylesheets:
@@ -235,7 +247,6 @@ scripts:
     # tscanlin/tocbot: Build a table of contents from headings in an HTML document.
     # https://github.com/tscanlin/tocbot
 
-
 # plugin functions
 ## Mathjax: Math Formula Support
 ## https://www.mathjax.org
@@ -247,6 +258,8 @@ mathjax:
 ```
 </details>
 <br>
+
+**From here the documentation would be the same as in the original theme, so you should check there, just in case.**
 
 ### Add 'Tag', 'Category' Page
 
@@ -273,7 +286,7 @@ layout: tag
 
 ### MathJax (Render LaTeX formula)
 
-Related config file (`Chic/_config.yml`):
+Related config file (`hexo-theme-chic-multilang/_config.yml`):
 ```yaml
 # plugin functions
 ## Mathjax: Math Formula Support
@@ -321,15 +334,15 @@ You can preview image-title and sample code in [Demo site](https://siricee.githu
 
 ## Customize
 
-- Highlight Style: Enter `hexo-theme-Chic\themes\Chic\source\css\style.styl` change stylesheet with key word `_highlight` in link in `_highlight` dictionary.
+- Highlight Style: Enter `hexo-theme-chic-multilang\source\css\style.styl` change stylesheet with key word `_highlight` in link in `_highlight` dictionary.
 
 - Customize stylesheets in this [stylus](https://stylus-lang.com/) file:
 
-   `hexo-theme-Chic\themes\Chic\source\css\custom.styl`
+   `hexo-theme-chic-multilang\source\css\custom.styl`
 
 - Customize javascripts in the dictionary:
 
-  `hexo-theme-Chic\themes\Chic\source\js`
+  `hexo-theme-chic-multilang\source\js`
 
   Then add declaration in `_config.yml`using the keyword 'script'.
 
@@ -344,14 +357,14 @@ You can preview image-title and sample code in [Demo site](https://siricee.githu
     # URL
     ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
     url: https://siricee.github.io/hexo-theme-Chic/  # this is your deploy url.
-    root: /hexo-theme-Chic/  # this is your root folder url.
+    root: /hexo-theme-chic-multilang/  # this is your root folder url.
     permalink: :year/:month/:day/:title/
     permalink_defaults:
     ```
 
 2. How to set the dark theme as default for whole site automatically?
    
-   Answer: You need to change some code in `themes\Chic\source\js\script.js`, function `doucument.ready` as shown below.
+   Answer: You need to change some code in `hexo-theme-chic-multilang\source\js\script.js`, function `document.ready` as shown below.
    ```javascript
    document.ready(
     function () {
