@@ -1,26 +1,17 @@
 # Header
-navname: House of Maldorne
+navname: Chic Multilang
 
 # navigator items
 nav:
   - blog: 
     name: nav.blog 
     url: /archives
-  - games: 
-    name: nav.games
-    url: /games
-  - play: 
-    name: nav.play
-    url: /play
-  - about:
-    name: nav.about
-    url: /about
 
 # favicons
 icons: true
 
 # Profile
-avatar: /image/maldorne_old_logo.png
+avatar: /image/avatar.jpeg
 
 i18n:
   language: [en, es]
@@ -36,15 +27,15 @@ links:
     icon: book-open
     prefix: fas
   Twitter: 
-    link: https://twitter.com/houseofmaldorne
+    link: https://twitter.com/neverbot
     icon: twitter
     prefix: fab
   LinkedIn: 
-    link: https://www.linkedin.com/company/11107294
+    link: https://www.linkedin.com/in/ivanalonso
     icon: linkedin
     prefix: fab
   Github: 
-    link: https://github.com/houseofmaldorne/
+    link: https://github.com/neverbot/
     icon: github
     prefix: fab
 #  Category:
@@ -88,7 +79,7 @@ post_copyright_enable: true
 post_copyright_author_enable: true
 post_copyright_permalink_enable: true
 post_copyright_license_enable: false
-post_copyright_license_text: Copyright (c) 2020 House of Maldorne
+post_copyright_license_text: Copyright (c) 2020 neverbot
 post_copyright_slogan_enable: false
 
 ## toc

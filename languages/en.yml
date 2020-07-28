@@ -27,13 +27,11 @@ nav:
   home: Home
   blog: Blog
   about: About
-  play: Play
-  games: Games
 
 home:
-  webname: House of Maldorne
+  webname: Chic Multilang
   ### this variable is MarkDown form.
-  description: We play, host, build, develop and recover old and new retro online games, from muds to roguelikes.
+  description: Lorem ipsum dolor sit amet, *consectetur adipiscing elit*. 
 
 toc:
   expand: Expand all
