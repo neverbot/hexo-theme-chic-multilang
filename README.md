@@ -1,18 +1,16 @@
 <h1 align="center"><a href="https://github.com/neverbot/hexo-theme-chic-multilang" target="_blank">Chic Theme, multilang version</a></h1>
 
-This is a modified version of the [Chic Theme](https://github.com/Siricee/hexo-theme-Chic) for [Hexo](https://hexo.io), made by [Siricee](https://github.com/Siricee). **Important**: Multilanguage does not mean the theme interface, Chic was _already_ multilanguage in that sense. It means it supports blog contents written in multiple languages, using the plugin [hexo-multilang](https://github.com/neverbot/hexo-multilang/) made by [neverbot](https://github.com/neverbot). If you need to publish a blog with posts written and translated to multiple languages, this could be used a a solution.
+This is a modified version of the [Chic Theme](https://github.com/Siricee/hexo-theme-Chic) for [Hexo](https://hexo.io), made by [Siricee](https://github.com/Siricee). **Important**: Multilanguage does not mean the theme interface, Chic was _already_ multilanguage in that sense. It means it supports blog contents written in multiple languages, using the plugin [hexo-multilang](https://github.com/neverbot/hexo-multilang/) made by [neverbot](https://github.com/neverbot). If you need to publish a blog with posts written and translated to multiple languages, this could be used a a solution. As you can see in the screenshot below, you will have a dropdown to select the content language of the blog.
 
 <p align="center">
   <img width="700" alt="chic multilang screenshot" src="/source/image/screenshot.png">
 </p>
-
 
 > Chic, French word meaning 'Elegant' in English.
 
 <p align="center">
 <img alt="Author" src="https://img.shields.io/badge/Author-Siricee-lightgray.svg"/>
 <img alt="Author" src="https://img.shields.io/badge/Author-neverbot-lightgray.svg"/>
-<img alt="Node" src="https://img.shields.io/badge/Node-6.0%2B-43853d.svg"/>
 <img alt="Hexo" src="https://img.shields.io/badge/Hexo-3.0+-0e83cd.svg"/>
 <img alt="Device" src="https://img.shields.io/badge/Device-responsive-orange.svg"/>
 </p>
