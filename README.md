@@ -3,8 +3,9 @@
 This is a modified version of the [Chic Theme](https://github.com/Siricee/hexo-theme-Chic) for [Hexo](https://hexo.io), made by [Siricee](https://github.com/Siricee). **Important**: Multilanguage does not mean the theme interface, Chic was _already_ multilanguage in that sense. It means it supports blog contents written in multiple languages, using the plugin [hexo-multilang](https://github.com/neverbot/hexo-multilang/) made by [neverbot](https://github.com/neverbot). If you need to publish a blog with posts written and translated to multiple languages, this could be used a a solution.
 
 <p align="center">
-<img src="https://i.loli.net/2019/06/12/5d006bd289aa325037.png" alt="Chic theme">
+  <img width="700" alt="chic multilang screenshot" src="/source/image/screenshot.png">
 </p>
+
 
 > Chic, French word meaning 'Elegant' in English.
 
