@@ -1,4 +1,6 @@
-<h1 align="center"><a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic Theme</a></h1>
+<h1 align="center"><a href="https://github.com/neverbot/hexo-theme-chic-multilang" target="_blank">Chic Theme, multilang version</a></h1>
+
+This is a modified version of the [Chic Theme](https://github.com/Siricee/hexo-theme-Chic) for [Hexo](https://hexo.io), made by [Siricee](https://github.com/Siricee). **Important**: Multilanguage does not mean the theme interface, Chic was _already_ multilanguage in that sense. It means it supports blog contents written in multiple languages, using the plugin [hexo-multilang](https://github.com/neverbot/hexo-multilang/) made by [neverbot](https://github.com/neverbot). If you need to publish a blog with posts written and translated to multiple languages, this could be used a a solution.
 
 <p align="center">
 <img src="https://i.loli.net/2019/06/12/5d006bd289aa325037.png" alt="Chic theme">
@@ -16,7 +18,6 @@
 
 ## Documentation language
 
-- [中文文档](README-CN.md)
 - [English](README.md)
 
 ## Contents
@@ -40,8 +41,7 @@
 An elegant, powerful, easy-to-read Hexo theme.
 
 ## Demo
-- [Demo site](https://siricee.github.io/hexo-theme-Chic)
-- <del>[Author's blog](https://siricee.github.io/)</del> (*Not using Hexo currently*)
+- [maldorne.org](https://maldorne.org)
 
 ## Features
 - Appropriate blank blocks, elegant but not simple.
@@ -60,8 +60,8 @@ An elegant, powerful, easy-to-read Hexo theme.
 
 ```bash
 cd your-blog/themes
-git clone https://github.com/Siricee/hexo-theme-Chic.git Chic
-# Modify theme setting in _config.yml to Chic.
+git clone https://github.com/neverbot/hexo-theme-chic-multilang.git
+# Modify theme setting in _config.yml to hexo-theme-chic-multilang.
 ```
 
 ## Configuration
