@@ -27,14 +27,7 @@ This is a modified version of the [Chic Theme](https://github.com/Siricee/hexo-t
 - [Features](#features)
 - [Installation](#installation)
 - [Configuration](#configuration)
-  - [Add 'Tag', 'Category' Page](#add-tagcategory-page)
-  - [MathJax (Render LaTeX Formula)](#mathjax-render-latex-formula)
-  - [Image-title](#image-title)
-- [Customize](#customize)
-- [FAQ](#faq)
-- [Gallary](#gallary)
 - [LICENSE](#license)
-
 
 ## Introduction
 An elegant, powerful, easy-to-read Hexo theme.
