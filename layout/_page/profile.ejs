@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="intro">
+        <div class="avatar">
+            <a href="<%- url_for(theme.nav.Blog) %>"><img src="<%- url_for(theme.avatar, { ignore: true }) %>"></a>
+        </div>
+        <div class="nickname"><%- __('home.webname') %></div>
+        <div class="description"><%- markdown(__('home.description')) %></div>
+        <div class="links">
+            <% if (theme.links !== undefined) { %>
+                <% for (var key in theme.links){ %>
+                    <a class="link-item" title="<%- key %>" href="<%= url_for(theme.links[key].link) %>">
+                        <% if(theme.links_text_enable) { %>
+                            <%= key %>
+                        <%}%>
+                        <%if(theme.links_icon_enable){ %>
+                            <span class="icon"><%- fa_inline(theme.links[key].icon, {prefix: theme.links[key].prefix}) %></span>
+                        <%}%>
+                    </a>
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+</div>

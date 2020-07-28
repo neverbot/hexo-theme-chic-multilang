@@ -1,0 +1,42 @@
+categories: Categories
+search: Search
+tags: Tags
+tagcloud: Tag Cloud
+tweets: Tweets
+prev: Prev
+next: Next
+comment: Comments
+archive_a: Archives
+archive_b: "Archives: %s"
+page: Page %d
+recent_posts: Recent Posts
+newer: Newer
+older: Older
+share: Share
+powered_by: Powered by
+rss_feed: RSS Feed
+category: Category
+category_map: Category Map
+tag: Tag
+tag_cloud: Tag Cloud
+date: Date
+author: Author
+back: Back
+
+nav:
+  home: Home
+  blog: Blog
+  about: About
+  play: Play
+  games: Games
+
+home:
+  webname: House of Maldorne
+  ### this variable is MarkDown form.
+  description: We play, host, build, develop and recover old and new retro online games, from muds to roguelikes.
+
+toc:
+  expand: Expand all
+  collapse: Collapse all
+  top: Back to top
+  bottom: Go to bottom

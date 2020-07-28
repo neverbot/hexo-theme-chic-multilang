@@ -1,0 +1,79 @@
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<% if(config.author){ %><meta name="author" content="<%- config.author %>"><% } %>
+<% if(config.subtitle){ %><meta name="subtitle" content="<%- config.subtitle %>"><% } %>
+<% if(config.description){ %><meta name="description" content="<%- config.description %>"><% } %>
+<% if(config.keywords){ %><meta name="keywords" content="<%- config.keywords %>"><% } %>
+<%
+var title = page.title;
+
+if (is_archive()){
+    title = __('archive_a');
+
+    if (is_month()){
+        title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+        title += ': ' + page.year;
+    }
+} else if (is_category()){
+    title = __('category') + ': ' + page.category;
+} else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+}
+%>
+<title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+
+<%# favicons %>
+<% if (theme.icons){ %>
+<link rel="apple-touch-icon" sizes="57x57" href="<%- url_for('/icons/apple-icon-57x57.png', { ignore: true }) %>">
+<link rel="apple-touch-icon" sizes="60x60" href="<%- url_for('/icons/apple-icon-60x60.png', { ignore: true }) %>">
+<link rel="apple-touch-icon" sizes="72x72" href="<%- url_for('/icons/apple-icon-72x72.png', { ignore: true }) %>">
+<link rel="apple-touch-icon" sizes="76x76" href="<%- url_for('/icons/apple-icon-76x76.png', { ignore: true }) %>">
+<link rel="apple-touch-icon" sizes="114x114" href="<%- url_for('/icons/apple-icon-114x114.png', { ignore: true }) %>">
+<link rel="apple-touch-icon" sizes="120x120" href="<%- url_for('/icons/apple-icon-120x120.png', { ignore: true }) %>">
+<link rel="apple-touch-icon" sizes="144x144" href="<%- url_for('/icons/apple-icon-144x144.png', { ignore: true }) %>">
+<link rel="apple-touch-icon" sizes="152x152" href="<%- url_for('/icons/apple-icon-152x152.png', { ignore: true }) %>">
+<link rel="apple-touch-icon" sizes="180x180" href="<%- url_for('/icons/apple-icon-180x180.png', { ignore: true }) %>">
+<link rel="icon" type="image/png" sizes="192x192"  href="<%- url_for('/icons/android-icon-192x192.png', { ignore: true }) %>">
+<link rel="icon" type="image/png" sizes="32x32" href="<%- url_for('/icons/favicon-32x32.png', { ignore: true }) %>">
+<link rel="icon" type="image/png" sizes="96x96" href="<%- url_for('/icons/favicon-96x96.png', { ignore: true }) %>">
+<link rel="icon" type="image/png" sizes="16x16" href="<%- url_for('/icons/favicon-16x16.png', { ignore: true }) %>">
+<link rel="manifest" href="/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<% } %>
+
+<%# css list %>
+<% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+<!-- stylesheets list from _config.yml -->
+<% theme.stylesheets.forEach(url => { %>
+<link rel="stylesheet" href="<%- url_for(url, { ignore: true }) %>">
+<% }); %>
+<% } %>
+
+<%# javascript list %>
+<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+<!-- scripts list from _config.yml -->
+<% theme.scripts.forEach(url => { %>
+<script src="<%- url_for(url, { ignore: true }) %>"></script>
+<% }); %>
+<% } %>
+
+<%# mathjax support %>
+<% if(theme.mathjax.enable!==null&&theme.mathjax.enable===true){ %>
+<%# import mathjax method: global or demand %>
+<% if(theme.mathjax.import === 'global'){ %>
+    <%- partial('_plugins/mathjax.ejs') %>
+<% } else if(theme.mathjax.import === 'demand'){ %>
+    <% if (page.mathjax){ %>
+        <%- partial('_plugins/mathjax.ejs') %>
+    <% } %>
+<% } %>
+<% } %>
+
+<style>
+  <%- fa_css() %>
+</style>

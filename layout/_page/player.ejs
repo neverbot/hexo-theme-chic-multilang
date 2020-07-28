@@ -1,0 +1,20 @@
+<script type="text/javascript">
+window.onload = () => {
+    let url = new URL(window.location.href);
+    let port = url.searchParams.get('port') || '5000';
+    let frame = document.getElementById('maldorneFrame');
+    frame.src = 'https://play.maldorne.org/?port=' + port;
+}
+</script>
+
+<div class="container">
+    <article class="post-wrap page">
+        <% if (theme.page_title_enable){ %>
+        <h2 class="post-title"><%- page.title %></h2>
+        <% } %>
+        <section class="post-content">
+            <%- page.content %>
+            <iframe id="maldorneFrame" src="" width="800" height="600"></iframe>
+        </section>
+    </article>
+</div>

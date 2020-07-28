@@ -1,0 +1,20 @@
+
+<select class="select-css" onChange="languageSelect(this)">
+  <% for (let lang of config.plugins['hexo-multilang'].languages){ %>
+      <option value="<%- lang %>" 
+        <% if ((page.lang || page.language) === lang) { %>
+          selected
+        <% } %>
+        ><%- lang %></option>
+  <% } %>
+</select>
+
+<script type="text/javascript">
+function languageSelect(elem) {
+  let selected = (elem.value || elem.options[elem.selectedIndex].value);
+  let parts = window.location.toString().split('/<%- page.lang || page.language %>/');
+  let destination = parts[0] + (parts[0][parts[0].length - 1] === '/' ? '' : '/') + 
+    selected + '/' + parts.slice(1)
+  window.location = destination;
+}
+</script>

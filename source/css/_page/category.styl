@@ -1,0 +1,50 @@
+.post-wrap
+  .categories-card
+    margin 0 auto
+    margin-top 1em
+    display flex
+    align-items center
+    justify-content space-between
+    flex-direction row
+    flex-wrap wrap
+    padding 0 2.5em
+    line-height 1.6em
+    .card-item
+      font-size 14px
+      text-align left
+      width 45%
+      display flex
+      align-items flex-start
+      margin-top 2em
+      min-height 16em
+      padding 0 2%
+      position relative
+      .categories
+        overflow hidden
+
+  .category-cloud-categories 
+    margin: 10px 0
+    padding-top 2em
+    a 
+      display: inline-block
+      position: relative
+      margin: 5px 10px
+      word-wrap: break-word
+      transition-duration: .3s
+      transition-property: transform
+      transition-timing-function: ease-out
+      &:active,
+      &:focus,
+      &:hover 
+        color: $light-global-link-hover-color
+        transform: scale(1.1)
+        .dark-theme &
+          color: $dark-global-link-hover-color
+      small
+        margin 0 .3em
+        color: $light-font-secondary-color
+        .dark-theme &
+          color: $dark-global-link-hover-color
+        
+      
+    
