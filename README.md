@@ -59,10 +59,79 @@ An elegant, powerful, easy-to-read Hexo theme.
 ## Installation
 
 ```bash
+cd your-blog/
+# remove the basic hexo plugins
+npm remove hexo-generator-archive hexo-generator-category hexo-generator-index hexo-generator-tag hexo-generator-basic-set hexo-generator-i18n
+# install the basic plugin needed
+npm install hexo-multilang
+# install some extras needed
+npm install hexo-fontawesome
+```
+
+Change the `language` configuration in your `_config.yml` to the multiple languages you needed, and the `permalink` and `new_post_name` so they include the `:language` slug somewhere:
+```yml
+language: [en, es]
+permalink: :language/:year/:month/:day/:title/
+new_post_name: :language/:year/:month/:day/:title.md
+```
+
+Copy the `hexo-multilang` configuration to the `_config.yml` file:
+```yml
+plugins:
+  hexo-multilang:
+    languages: [en, es]  
+
+    pagination-dir: page
+
+    index-generator:
+      per-page: 5
+      order-by: -date
+      index-dir: 
+      default-lang: en
+
+    archive-generator:
+      per-page: 10
+      order-by: -date
+      archives-dir: archives
+      yearly: true
+      monthly: true
+      daily: false
+
+    category-generator:
+      per-page: 10
+      order-by: -date
+      categories-dir: categories
+      enable-index-page: true
+
+    tag-generator:
+      per-page: 5
+      order-by: -date
+      tags-dir: tags
+      enable-index-page: true
+```
+
+```bash
 cd your-blog/themes
 git clone https://github.com/neverbot/hexo-theme-chic-multilang.git
 # Modify theme setting in _config.yml to hexo-theme-chic-multilang.
 ```
+
+And last but not least, create some initial content to test the blog:
+``` bash
+$ hexo new 'Hello world'
+INFO  Posts created in: en, es
+INFO  Created: /<your path>/source/_posts/es/1900/01/01/hello-world.md
+INFO  Created: /<your path>/source/_posts/en/1900/01/01/hello-world.md
+```
+
+If you now generate the blog and serve it, should be able to see the new contents:
+``` bash
+$ hexo generate
+$ hexo server
+INFO  Start processing
+INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
+```
+
 
 ## Configuration
 <details>
